@@ -1,0 +1,56 @@
+var onRun = function(context) {
+  var selection = context.selection
+
+  if (selection.length() > 0){
+
+    var alert = buildDialog(selection.length())
+    var options = handleAlertResponse(alert,alert.runModal());
+    var loop = selection.objectEnumerator()
+
+    while (item = loop.nextObject()) {
+      item.frame().setX(options['new_x'])
+      item.frame().setY(options['new_y'])
+    }
+
+  } else {
+    context.document.showMessage("Yo, select some layers")
+  }
+
+
+
+  function handleAlertResponse(alert, responseCode) {
+    if (responseCode == "1000") {
+      function valAtIndex (view, index) {
+        return parseInt(view.viewAtIndex(index).stringValue());
+      }
+
+      return {
+        new_y: alert.viewAtIndex(1).stringValue(),
+        new_x: alert.viewAtIndex(3).stringValue()
+      }
+    }
+
+    return null;
+  }
+
+  function buildDialog(count){
+    var alert = COSAlertWindow.new();
+
+    function addFieldWithLabel(label,defaultValue) {
+      alert.addTextLabelWithValue(label);
+      alert.addTextFieldWithValue(defaultValue);
+    }
+
+    alert.setMessageText("Move selected layers");
+    if (count > 1) { var lay = 'layers' } else { var lay = 'layer'}
+    alert.setInformativeText(count + " " + lay + " selected.");
+
+    addFieldWithLabel("Move horizontaly (px)","");
+    addFieldWithLabel("Move verticaly (px)","");
+
+    alert.addButtonWithTitle('OK');
+    alert.addButtonWithTitle('Cancel');
+
+    return alert;
+  }
+};

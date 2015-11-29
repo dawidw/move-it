@@ -1,0 +1,23 @@
+{
+  "name" : "MoveIt",
+  "author" : "Dawid Woźniak",
+  "description" : "Let's you move selected layers verticaly and horizontaly.",
+  "authorEmail" : "dawid@plaind.pl",
+  "version" : "1.0",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "cmd shift m",
+      "name" : "MoveIt",
+      "identifier" : "moveit"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "moveit"
+    ],
+    "title" : "MoveIt"
+  },
+  "identifier" : "com.example.sketch.5e5693a0-fcd9-4b54-990d-649a41482f79"
+}
