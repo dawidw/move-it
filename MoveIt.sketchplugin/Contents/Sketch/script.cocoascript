@@ -45,8 +45,8 @@ var onRun = function(context) {
     if (count > 1) { var lay = 'layers' } else { var lay = 'layer'}
     alert.setInformativeText(count + " " + lay + " selected.");
 
-    addFieldWithLabel("Move horizontaly (px)","");
-    addFieldWithLabel("Move verticaly (px)","");
+    addFieldWithLabel("Move horizontally (px)","");
+    addFieldWithLabel("Move vertically (px)","");
 
     alert.addButtonWithTitle('OK');
     alert.addButtonWithTitle('Cancel');

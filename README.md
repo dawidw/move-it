@@ -1,6 +1,6 @@
 # Move It
-Sketch plugin that let's you move selected layers verticaly and horizontaly.
-Because ther wasn't Illustrator Move feature out of the box.
+Sketch plugin that let's you move selected layers vertically and horizontally.
+Because there wasn't Illustrator Move feature out of the box.
 
 ![Move it screen](./images/moveit.png)
 
@@ -13,7 +13,7 @@ Because ther wasn't Illustrator Move feature out of the box.
 ## Usage
 1. Select layer(s) you want to move.
 2. `Plugins ▸ Move It ▸ MoveIt` or <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>m</kbd>
-3. Enter how many px you want to move layer(s) horizontaly and verticaly.
+3. Enter how many px you want to move layer(s) horizontally and vertically.
 4. Click OK.
 
 ##Contact
