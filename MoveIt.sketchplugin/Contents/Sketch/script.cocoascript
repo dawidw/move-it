@@ -8,8 +8,8 @@ var onRun = function(context) {
     var loop = selection.objectEnumerator()
 
     while (item = loop.nextObject()) {
-      item.frame().setX(options['new_x'])
-      item.frame().setY(options['new_y'])
+      item.frame().addX(options['new_x'])
+      item.frame().addY(options['new_y'])
     }
 
   } else {
@@ -25,8 +25,8 @@ var onRun = function(context) {
       }
 
       return {
-        new_y: alert.viewAtIndex(1).stringValue(),
-        new_x: alert.viewAtIndex(3).stringValue()
+        new_x: alert.viewAtIndex(1).stringValue(),
+        new_y: alert.viewAtIndex(3).stringValue()
       }
     }
 
