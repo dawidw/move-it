@@ -2,7 +2,7 @@
 Sketch plugin that let's you move selected layers vertically and horizontally.
 Because there wasn't Illustrator Move feature out of the box.
 
-![Move it screen](./images/moveit.png)
+![Move it screen](./images/solution.gif)
 
 ## Instalation
 1. Download plugin
