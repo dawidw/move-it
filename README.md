@@ -4,7 +4,7 @@ Because there wasn't Illustrator Move feature out of the box.
 
 ![Move it screen](./images/solution.gif)
 
-## Instalation
+## Installation
 1. Download plugin
 2. Navigate the Sketch menu bar to `Plugins ▸ Reveal Plugins Folder...`
 3. Place the `MoveIt` folder into the revealed plugins directory
