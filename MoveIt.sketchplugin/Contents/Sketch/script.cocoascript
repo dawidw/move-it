@@ -1,9 +1,9 @@
 var onRun = function(context) {
   var selection = context.selection
 
-  if (selection.length() > 0){
+  if (selection.length > 0){
 
-    var alert = buildDialog(selection.length())
+    var alert = buildDialog(selection.length)
     var options = handleAlertResponse(alert,alert.runModal());
     var loop = selection.objectEnumerator()
 
