@@ -41,12 +41,11 @@ var onRun = function(context) {
       alert.addTextFieldWithValue(defaultValue);
     }
 
-    alert.setMessageText("Move selected layers");
     if (count > 1) { var lay = 'layers' } else { var lay = 'layer'}
-    alert.setInformativeText(count + " " + lay + " selected.");
+    alert.setMessageText("Move " + count + " " + lay);
 
-    addFieldWithLabel("Move horizontally (px)","");
-    addFieldWithLabel("Move vertically (px)","");
+    addFieldWithLabel("Move horizontally, px","");
+    addFieldWithLabel("Move vertically, px","");
 
     alert.addButtonWithTitle('OK');
     alert.addButtonWithTitle('Cancel');
