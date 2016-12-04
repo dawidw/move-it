@@ -17,7 +17,7 @@ Because there wasn't Illustrator Move feature out of the box.
 4. Click OK.
 
 ## Contributors
-* Vlad Moroz (https://twitter.com/vladyslavmoroz)
+* Vlad Moroz (https://twitter.com/vladyslavmoroz) - fixed autofocus on input in new Sketch version.
 
 ## Contact
 * Follow [@dawidwu](http://twitter.com/dawidwu) on Twitter
