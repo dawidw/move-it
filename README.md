@@ -16,6 +16,9 @@ Because there wasn't Illustrator Move feature out of the box.
 3. Enter how many px you want to move layer(s) horizontally and vertically.
 4. Click OK.
 
-##Contact
+## Contributors
+* Vlad Moroz (https://twitter.com/vladyslavmoroz)
+
+## Contact
 * Follow [@dawidwu](http://twitter.com/dawidwu) on Twitter
 * Email <dawid@plaind.pl>
