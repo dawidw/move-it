@@ -4,6 +4,14 @@ Because there wasn't Illustrator Move feature out of the box.
 
 ![Move it screen](./images/solution.gif)
 
+Thanks to [Vlad Moroz](https://github.com/vladmoroz) you can now use math operators in inputs:
+```
+X: 10*12+30-5 will move layer by 145 pixels
+Y: 1/3 will move layer by 0.33(3) pixels
+```
+
+Supported operators: + - * / ( )
+
 ## Installation
 1. Download plugin
 2. Navigate the Sketch menu bar to `Plugins ▸ Reveal Plugins Folder...`
@@ -17,7 +25,7 @@ Because there wasn't Illustrator Move feature out of the box.
 4. Click OK.
 
 ## Contributors
-* Vlad Moroz (https://twitter.com/vladyslavmoroz) - fixed autofocus on input in new Sketch version.
+* Vlad Moroz (https://twitter.com/vladyslavmoroz) - fixed autofocus on input in new Sketch version, added math expressions handling
 
 ## Contact
 * Follow [@dawidwu](http://twitter.com/dawidwu) on Twitter
