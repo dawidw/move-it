@@ -4,29 +4,32 @@ var onRun = function(context) {
   if (selection.length > 0){
 
     var alert = buildDialog(selection.length)
-    var options = handleAlertResponse(alert,alert.runModal());
+    var options = handleAlertResponse(alert, alert.runModal());
     var loop = selection.objectEnumerator()
 
     while (item = loop.nextObject()) {
-      item.frame().setX(parseFloat(item.frame().x()) + parseFloat(options['new_x']))
-      item.frame().setY(parseFloat(item.frame().y()) + parseFloat(options['new_y']))
+      item.frame().setX(parseFloat(item.frame().x()) + parseFloat(options['new_x']));
+      item.frame().setY(parseFloat(item.frame().y()) + parseFloat(options['new_y']));
     }
 
   } else {
     context.document.showMessage("Yo, select some layers")
   }
 
-
+  function evaluate(value) {
+    value = eval(value.replace(/[^\d\-\*\.\+\/\(\)]/g, ''));
+    return value ? value : 0;
+  }
 
   function handleAlertResponse(alert, responseCode) {
     if (responseCode == "1000") {
       function valAtIndex (view, index) {
-        return parseInt(view.viewAtIndex(index).stringValue());
+        return parseInt(evaluate(view.viewAtIndex(index).stringValue()));
       }
 
       return {
-        new_x: alert.viewAtIndex(1).stringValue(),
-        new_y: alert.viewAtIndex(3).stringValue()
+        new_x: evaluate(alert.viewAtIndex(1).stringValue()),
+        new_y: evaluate(alert.viewAtIndex(3).stringValue())
       }
     }
 
