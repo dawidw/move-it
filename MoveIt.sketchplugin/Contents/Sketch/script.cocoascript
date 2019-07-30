@@ -10,7 +10,9 @@ var onRun = function(context) {
     while (item = loop.nextObject()) {
       item.frame().setX(parseFloat(item.frame().x()) + parseFloat(options['new_x']));
       item.frame().setY(parseFloat(item.frame().y()) + parseFloat(options['new_y']));
-      item.adjustToFit();
+      if (item.layers && object.layers.length) {
+      	item.adjustToFit();
+      }
     }
 
   } else {
